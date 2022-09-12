@@ -12,6 +12,7 @@ using namespace std;
 
 class A {
 public:
+  // CRUX ::通过声明中赋值0来声明纯虚函数
     virtual void f() = 0;  // 纯虚函数
     void g(){ this->f(); }
     A(){}

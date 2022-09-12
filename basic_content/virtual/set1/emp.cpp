@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-
+// 虚函数多态??
 class Employee 
 { 
     public: 

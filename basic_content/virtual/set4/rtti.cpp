@@ -11,13 +11,26 @@
 #include<iostream>
 #include<typeinfo>
 using namespace std; 
-class B { virtual void fun() {} }; 
-class D: public B { }; 
+class B { 
+public:
+  virtual void fun() {
+    cout << "bbbb" << endl;
+  } 
+}; 
+class D: public B { 
+  public:
+    void fun(){
+      cout << "dddd" <<endl;
+    }
+}; 
 
 int main() 
 { 
+    // 转过来  看看能不能再转回去, 给转回去提供一个机会, 而不是直接把 B  转换为 D
+    // 是把 D转过来的B再转会D
     B *b = new D;  // 向上转型
     B &obj = *b;
+    // CRUX dynamic_cast
     D *d = dynamic_cast<D*>(b);   // 向下转型
     if(d != NULL) 
         cout << "works"<<endl; 
@@ -30,5 +43,8 @@ int main()
     } catch (bad_cast bc) { // ERROR
         cout<<bc.what()<<endl;
     }
+    // 虚函数还是看指针指向的内容决定  编译器管不了的哈哈哈哈
+    b->fun();
+    d->fun();
     return 0;
 }

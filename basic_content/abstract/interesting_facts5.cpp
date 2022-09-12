@@ -16,6 +16,22 @@ class Base  {
         virtual ~Base()   { cout << "Destructor : Base" << endl; }
 };
 
+// CRUX
+// 去掉virtual后打印的结果变为 
+/*
+Constructor: Base
+Constructor: Derived
+Destructor : Base
+*/
+
+// 加上为 
+/*
+Constructor: Base
+Constructor: Derived
+Destructor : Derived
+Destructor : Base
+*/
+
 class Derived: public Base {
     public:
         Derived()   { cout << "Constructor: Derived" << endl; }

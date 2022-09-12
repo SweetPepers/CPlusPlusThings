@@ -16,14 +16,14 @@ class Base
         int x; 
     public: 
         virtual void fun() = 0; 
-        Base(int i) { x = i; } 
+        Base(int i):x(i){} 
 }; 
 
 class Derived: public Base 
 { 
     int y; 
     public: 
-    Derived(int i, int j):Base(i) { y = j; } 
+    Derived(int i, int j):Base(i),y(j) {} 
     void fun() { cout << "x = " << x << ", y = " << y; } 
 }; 
 

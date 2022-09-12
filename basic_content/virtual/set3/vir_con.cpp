@@ -4,7 +4,7 @@
  *
  * 为什么构造函数不可以为虚函数？
  *
- * 尽管虚函数表vtable是在编译阶段就已经建立的，但指向虚函数表的指针vptr是在运行阶段实例化对象时才产生的。 如果类含有虚函数，编译器会在构造函数中添加代码来创建vptr。 问题来了，如果构造函数是虚的，那么它需要vptr来访问vtable，可这个时候vptr还没产生。 因此，构造函数不可以为虚函数。
+ * CRUX :: 尽管虚函数表vtable是在编译阶段就已经建立的，但指向虚函数表的指针vptr是在运行阶段实例化对象时才产生的。 如果类含有虚函数，编译器会在构造函数中添加代码来创建vptr。 问题来了，如果构造函数是虚的，那么它需要vptr来访问vtable，可这个时候vptr还没产生。 因此，构造函数不可以为虚函数。
  * 我们之所以使用虚函数，是因为需要在信息不全的情况下进行多态运行。而构造函数是用来初始化实例的，实例的类型必须是明确的。
  * 因此，构造函数没有必要被声明为虚函数。
  * 尽管构造函数不可以为虚函数，但是有些场景下我们确实需要 “Virtual Copy Constructor”。 “虚复制构造函数”的说法并不严谨，其只是一个实现了对象复制的功能的类内函数。 举一个应用场景，比如剪切板功能。 复制内容作为基类，但派生类可能包含文字、图片、视频等等。 我们只有在程序运行的时候才知道我们需要复制的具体是什么类型的数据。
@@ -148,24 +148,23 @@ Base *Base::Create(int id)
 class User 
 { 
     public: 
-        User() : pBase(0) 
-    { 
-        // Creates any object of Base heirarchey at runtime 
+        User() : pBase(0) { 
+          // Creates any object of Base heirarchey at runtime 
 
-        int input; 
+          int input; 
 
-        cout << "Enter ID (1, 2 or 3): "; 
-        cin >> input; 
+          cout << "Enter ID (1, 2 or 3): "; 
+          cin >> input; 
 
-        while( (input != 1) && (input != 2) && (input != 3) ) 
-        { 
-            cout << "Enter ID (1, 2 or 3 only): "; 
-            cin >> input; 
+          while( (input != 1) && (input != 2) && (input != 3) ) 
+          { 
+              cout << "Enter ID (1, 2 or 3 only): "; 
+              cin >> input; 
+          } 
+
+          // Create objects via the "Virtual Constructor" 
+          pBase = Base::Create(input); 
         } 
-
-        // Create objects via the "Virtual Constructor" 
-        pBase = Base::Create(input); 
-    } 
 
         ~User() 
         { 

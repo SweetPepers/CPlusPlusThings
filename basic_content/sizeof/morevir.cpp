@@ -19,6 +19,6 @@ class A{
 };
 int main()
 {
-    cout<<sizeof(A)<<endl;
+    cout<<sizeof(A)<<endl;  // 8
     return 0;
 }

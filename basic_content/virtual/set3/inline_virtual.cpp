@@ -24,6 +24,7 @@ int main()
     Base b;
     b.who();
 
+    // 加了 但不一定有用
     // 此处的虚函数是通过指针调用的，呈现多态性，需要在运行时期间才能确定，所以不能为内联。  
     Base *ptr = new Derived();
     ptr->who();

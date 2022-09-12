@@ -9,7 +9,7 @@
 
 #include<iostream>
 using namespace std;
-class A
+class A   //16 
 {
     public:
         char b;

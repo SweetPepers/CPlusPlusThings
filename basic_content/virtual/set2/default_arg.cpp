@@ -31,9 +31,22 @@ class Derived : public Base
 
 int main() 
 { 
-    Derived d1; 
+    // 虚函数是动态绑定的  也就是绑定指针内容指向的位置
+    // 虚函数绑定 Derived  
+    Derived d1; // Derived::fun(), x = 20
+    d1.fun();
+    // 默认参数绑定  指针 *bp
     Base *bp = &d1; 
-    bp->fun();  // 10
+    bp->fun();  // 10  // Derived::fun(), x = 10
     return 0; 
 } 
+
+// int main() 
+// { 
+//     Derived d1; 
+//     Base &bp = d1; 
+//     bp.fun();  // 10
+//     return 0; 
+// } 
+
 

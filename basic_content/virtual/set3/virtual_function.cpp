@@ -11,7 +11,7 @@
 
 #include<iostream> 
 using namespace std; 
-
+// CRUX  TODO friend  : 跟md描述的不一样  friend
 class Derived; 
 
 class Base { 

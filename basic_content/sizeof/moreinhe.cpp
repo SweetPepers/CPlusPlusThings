@@ -10,14 +10,14 @@
 
 using namespace std;
 
-class A
+class A  // 8
 {
     public:
         char a;
         int b;
 };
 
-class B
+class B  // 16 
 {
     public:
         short a;
