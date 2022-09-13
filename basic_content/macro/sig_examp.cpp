@@ -27,6 +27,7 @@ using namespace std;
 
 #define gc_hello1 "I am gc_hello1"
 
+// define就是 编译前预处理的替换
 
 ///===========================================
 /**
@@ -41,9 +42,6 @@ int main() {
     /**
      * (#)字符串操作符
      */
-    ///===========================================
-    exp("hello");
-    exp1(hello);
 
     string str = exp2(   bac );
     cout<<str<<" "<<str.size()<<endl;

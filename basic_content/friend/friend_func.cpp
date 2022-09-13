@@ -19,7 +19,7 @@ private:
     int a;
 };
 
-int geta(A &ca) 
+int geta(A &ca)   // 友元函数  可以访问类的私有部分
 {
     return ca.a;
 }

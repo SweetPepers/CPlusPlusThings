@@ -6,7 +6,8 @@
  * @date 2019-07-25
  */
 
-# define NDEBUG // 忽略断言
+# define NDEBUG // 忽略断言  CRUX
+
 
 #include<assert.h>
 

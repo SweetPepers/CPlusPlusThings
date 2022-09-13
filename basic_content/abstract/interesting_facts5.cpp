@@ -16,7 +16,6 @@ class Base  {
         virtual ~Base()   { cout << "Destructor : Base" << endl; }
 };
 
-// CRUX
 // 去掉virtual后打印的结果变为 
 /*
 Constructor: Base

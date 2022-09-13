@@ -6,7 +6,7 @@ class A
 {
 public:
     A(int _a):a(_a){};
-    friend class B;
+    friend class B;  // CRUX
 private:
     int a;
 };

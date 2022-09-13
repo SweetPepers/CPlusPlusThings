@@ -1,7 +1,7 @@
 #include <iostream>
 
 using namespace std;
-
+// CRUX  看不太懂
 struct A
 {
     A(int) { }

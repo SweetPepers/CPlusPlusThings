@@ -35,6 +35,7 @@ int main() {
         int i;
         double d;
     };
+    // 神经病吧   这要是正常人写这样的代码早被开除了
 
     std::cout << u.i << std::endl;  // 输出 UnionTest 联合的 10
 

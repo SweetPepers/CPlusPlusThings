@@ -661,3 +661,25 @@ throw “hello”;
 - 里面接不住，会向外一层抛出异常
 - std::exception 是异常的总类
  
+
+
+# new
+
+使用 enmu class
+```cpp
+enum class Color2
+{
+    RED=2,
+    YELLOW,
+    BLUE
+};
+```
+
+decltype : declare type
+
+define就是 编译前预处理的替换
+
+\## 字符串拼接 
+
+\\ : 这一行没完
+
