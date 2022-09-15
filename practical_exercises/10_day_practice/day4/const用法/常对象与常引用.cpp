@@ -13,8 +13,7 @@ class A
 int main()
 {   double d(9.5);
      display(d);
-     A const a(3,4); //a是常对象，不能被更新
-     system("pause");
+    A const a(3,4); //a是常对象，不能被更新
      return 0;
 }
 void display(const double& r)

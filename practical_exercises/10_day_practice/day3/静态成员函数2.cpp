@@ -4,7 +4,7 @@ class A
 {
     public:
         static void f(A a);
-    private:
+    private:  // 在A的作用域可以访问
         int x;
 };
 void A::f(A a)

@@ -17,9 +17,9 @@ public:
 int main(){
     Time t1(12,10,11);
     t1.ShowTime();
-    t1.operator()(23,20,34);	
+    t1.operator()(23,20,34);	 
     t1.ShowTime();
     t1(10,10,10);               	
     t1.ShowTime();
-    system("pause");
+    // system("pause");
 }

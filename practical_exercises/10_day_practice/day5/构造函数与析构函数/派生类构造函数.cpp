@@ -22,6 +22,5 @@ public:
 };
 int main(){
     Derived d(1,2);
-    system("pause");
     return 0;
 } 

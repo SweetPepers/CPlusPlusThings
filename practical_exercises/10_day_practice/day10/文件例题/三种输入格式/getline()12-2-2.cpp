@@ -11,7 +11,7 @@ int main()
 	char a[10];
     char b;
     cin.get(a,10);
-	cin.get(b);
+	cin.get(b); 
     cout<<a<<endl<<int(b);//ÊäÈë£º12345[enter] Êä³ö£º12345 ¡¾»»ĞĞ¡¿ 10*/
     /*char c[10];
     char d;

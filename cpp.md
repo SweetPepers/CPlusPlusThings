@@ -679,7 +679,24 @@ decltype : declare type
 
 define就是 编译前预处理的替换
 
+dynamic_cast 给对象一个转回去的机会
 \## 字符串拼接 
 
 \\ : 这一行没完
 
+// delete ptr -- 代表用来释放内存，且只用来释放ptr指向的内存。
+// delete[] rg -- 用来释放rg指向的内存，！！还逐一调用数组中每个对象的 destructor！
+// 对于简单类型, delete 和 delete[]是一样的
+
+
+输入  去库函数查  arrayname 必须为 char[]类型
+cin.get(arrayname,size)
+cin.get(arrayname,size,s) ?把数据输入到arrayname字符数组中，当到达长度size时结束或者遇到字符s时结束
+cin.getline(arrayname,size)会删除末尾的回车
+cin.getline(arrayname,size,s)当遇到s时会结束输入，并把s从缓冲区中删除
+
+io详见文档Input/Output
+```cpp
+cout<<setw(30)<<left<<setfill('*')<<c<<"----L1"<<endl;
+
+```

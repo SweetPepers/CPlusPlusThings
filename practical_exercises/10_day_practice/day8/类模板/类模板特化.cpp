@@ -68,5 +68,4 @@ int main(){
     for(int i=0;i<5;i++)
     cout<<b1[i]<<"\t";
     cout<<endl;	
-    system("pause");
 }

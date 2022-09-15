@@ -48,6 +48,5 @@ int main(int argc, char const *argv[])
     t.showTime();
 	(t++).showTime();
     t.showTime();
-    system("pause");
     return 0;
 }

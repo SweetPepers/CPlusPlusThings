@@ -1,5 +1,7 @@
 #include<iostream>
 #include<fstream>
+// CRUX
+
 //向量是一个能够存放任意类型的动态数组
 #include<vector>
 #include<cstring>
@@ -27,7 +29,8 @@ int main(int argc, char const *argv[])
     vector<Person> v;
     vector<Person>::iterator pos;//声明一个迭代器，来访问vector容器，作用：遍历或者指向vector容器的元素 
     char ch;
-    ofstream out("d:/person.dat",ios::out|ios::app|ios::binary);
+    // output file stream
+    ofstream out("./person.dat",ios::out|ios::app|ios::binary);
     char Name[20],ID[18],Addr[20];
     int Age;
     cout<<"------输入个人档案------"<<endl<<endl;
@@ -41,12 +44,14 @@ int main(int argc, char const *argv[])
         cout<<"地址： ";
         cin>>Addr;
         Person per(Name,ID,Age,Addr);
+        // 将per写入文件中
         out.write((char*)&per,sizeof(per));
         cout<<"Enter another Person(y/n)?";
         cin>>ch;
     }while(ch=='y');
     out.close();
-    ifstream in("d:/person.dat",ios::in|ios::binary);	//L9
+    // input file stream
+    ifstream in("./person.dat",ios::in|ios::binary);	//L9
     Person s;
     in.read((char*)&s,sizeof(s));		
     while(!in.eof()){							       
@@ -57,7 +62,6 @@ int main(int argc, char const *argv[])
     pos=v.begin();						
     for(pos=v.begin();pos!=v.end();pos++)				        
         (*pos).display();				
-
     system("pause");
     return 0;
 }

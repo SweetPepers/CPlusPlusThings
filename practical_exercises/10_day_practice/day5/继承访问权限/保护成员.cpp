@@ -33,4 +33,5 @@ int main()
     system("pause");
     return 0;
 }
+// 对派生类表现为 private   
 

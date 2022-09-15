@@ -21,5 +21,4 @@ int main(){
     t1.ShowTime();
     t1(10,10,10);               	
     t1.ShowTime();
-    system("pause");
 }

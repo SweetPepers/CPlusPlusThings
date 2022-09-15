@@ -27,6 +27,7 @@ class Complex{
         friend Complex operator+(Complex a,double b){
             return Complex(a.r+b,a.i);
         }
+        // 多了个这个
         friend Complex operator+(double a,Complex b){
             return Complex(a+b.r,b.i);
         }

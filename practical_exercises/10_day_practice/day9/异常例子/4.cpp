@@ -3,8 +3,8 @@ using namespace std;
 void temperature(int t)
 {
     
-    if(t==100) throw "·Ðµã£¡";
-    else if(t==0) throw "±ùµã£¡";
+    if(t==100) throw "100char";
+    else if(t==0) throw "0char";
     else{cout<<"temperatore="<<t<<endl;}
    
 }
@@ -15,6 +15,5 @@ int main(){
         temperature(100);						//L3
     }
     catch(char const*s){cout<<s<<endl;}
-    system("pause");
     return 0;
 }

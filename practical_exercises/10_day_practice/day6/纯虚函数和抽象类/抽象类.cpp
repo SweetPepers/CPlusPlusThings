@@ -40,7 +40,6 @@ int main(int argc, char const *argv[])
     Figure &rF=t;
     rF.set(20,20);
     rF.area();
-    system("pause");
     return 0;
 }
 

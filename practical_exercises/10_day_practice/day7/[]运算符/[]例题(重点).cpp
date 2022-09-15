@@ -1,4 +1,5 @@
 //Eg8-9.cpp
+// CRUX
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -40,7 +41,8 @@ int main(){
     s["张三"]=2188.88;
     s["里斯"]=1230.07;
     s["王无"]=3200.97;
-    cout<<"张三\t"<<s["张三"]<<endl;          cout<<"里斯\t"<<s["里斯"]<<endl;
+    cout<<"张三\t"<<s["张三"]<<endl;          
+    cout<<"里斯\t"<<s["里斯"]<<endl;
     cout<<"王无\t"<<s["王无"]<<endl;
   
     cout<<"-------下为display的输出--------\n\n";

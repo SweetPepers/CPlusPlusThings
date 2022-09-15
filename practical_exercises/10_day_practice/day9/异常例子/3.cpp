@@ -14,6 +14,5 @@ int main(){
     temperature(0);						//L1
     temperature(10);						//L2
     temperature(100);						//L3
-    system("pause");
     return 0;
 }

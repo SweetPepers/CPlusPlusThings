@@ -1,6 +1,8 @@
 //设计一个字符串类String，通过运算符重载实现字符串的输入、输出以及+=、==、!=、<、>、>=、[ ]等运算。
 #include <iostream>
 #include <cstring>
+
+// CRUX
 using namespace std;
 class String
 {
@@ -8,7 +10,7 @@ private:
     int length; //字符串长度
     char *sPtr; //存放字符串的指针
     void setString(const char *s2);
-    friend ostream &operator<<(ostream &os, const String &s)
+    friend ostream& operator<<(ostream &os, const String &s)
     {
         return os << s.sPtr;
     };
@@ -35,13 +37,16 @@ public:
     ~String(){};
 };
 const String &String::operator+=(const String &R)
-{
-    char *temp = sPtr;
-    length += R.length;
-    sPtr = new char[length + 1];
-    strcpy(sPtr, temp);
-    strcat(sPtr, R.sPtr);
-    delete[] temp;
+{   
+    // auto tmp = sPtr;
+    // sPtr = new char[length + R.length + 1];
+    // length += R.length;
+    // strcpy(sPtr, tmp);
+    strcat(sPtr, R.sPtr);  //目标空间必须足够大，能够容纳下源字符串的内容，否则会越界访问   所以为了安全要申请一个新的数组
+    // delete[] tmp;  // delete[]分配
+    // delete ptr -- 代表用来释放内存，且只用来释放ptr指向的内存。
+    // delete[] rg -- 用来释放rg指向的内存，！！还逐一调用数组中每个对象的 destructor！
+    // 对于简单类型, delete 和 delete[]是一样的
     return *this;
 }
 String::String(const char *str)
@@ -86,6 +91,5 @@ int main()
     s1[6] = 'N';
     s1[10] = 'Y';
     cout << "s1 = " << s1 << "\n"; //L10
-    system("pause");
     return 0;
 }

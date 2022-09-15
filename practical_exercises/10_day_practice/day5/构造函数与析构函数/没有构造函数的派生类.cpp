@@ -11,5 +11,4 @@ public:
 };
 int main(){
     B b;
-    system("pause");
 }

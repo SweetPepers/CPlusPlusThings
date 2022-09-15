@@ -26,6 +26,7 @@ public:
     
 int main(){
     D d(1,2);
-    system("pause");
     return 0;
 }
+
+//B A B1 A B2 A D

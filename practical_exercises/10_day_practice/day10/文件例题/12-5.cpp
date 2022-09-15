@@ -5,6 +5,7 @@ using namespace std;
 int main(){
     char c[30]="this is string";
     double d=-1234.8976;
+    //    setw(30)<<left<<setfill('*') 全都是用来修饰c的  并且对后面的都生效
     cout<<setw(30)<<left<<setfill('*')<<c<<"----L1"<<endl;
     cout<<setw(30)<<right<<setfill('*')<<c<<"----L2"<<endl;
     //showbase显示数值的基数前缀

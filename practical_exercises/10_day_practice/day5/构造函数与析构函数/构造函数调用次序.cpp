@@ -25,16 +25,18 @@ public:
         cout << "C-----"<<z<<endl;
     } 
 };
+
+// 按照声明顺序构造, 最后构造自己
 class D : public B{
 public: 
     C c1, c2;
     A *a1 = new A(10);
     A a0,a4;
-    D( ) : a4(4),c2(2),c1(1),B(1) {
+    D( ) : a4(4),c2(2),B(1), c1(1) {
 cout << "D-----5"<<endl;
     }
 };
 int main(){
     D d;
-    system("pause");
+    // system("pause");
 }

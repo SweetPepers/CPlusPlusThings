@@ -48,7 +48,7 @@ void Complex::display(){
 int main(void) {
     Complex c1(1,2),c2(3,4),c3,c4,c5,c6;
     Complex a,b(2,3);
-    a=b+2;       			//正确
+    a=b+2;       			    //正确 
     // a=2+b;       			//错误   
     a.display();  
     c3=c1+c2;
@@ -61,7 +61,6 @@ int main(void) {
     c4.display();
     c5.display();
     c6.display();
-    system("pause");
     return 0;
 }
 

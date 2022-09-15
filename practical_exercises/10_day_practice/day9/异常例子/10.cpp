@@ -38,5 +38,4 @@ int main(){
         cout<<"Exception: Stack Full..."<<endl;
         cout<<"The value not push in stack:"<<e.getValue()<<endl; 
     }
-    system("pause");
 }

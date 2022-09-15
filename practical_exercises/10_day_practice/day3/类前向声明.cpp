@@ -14,6 +14,7 @@ class Fred {
    Barney y;
 };
 
+// 不完善只能加指针
 
 //第二种
 class Fred;	//前向引用声明

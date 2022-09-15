@@ -15,5 +15,4 @@ int main(){
         cout<<"5--In catch block2 ... exception..errcode is.."<<s<<endl;
     }
     cout<<"6--After Catch...";
-    system("pause");
 }

@@ -9,7 +9,6 @@ int main()
 	c = cin.get();
 	d = cin.get();
 	cout<<int(a)<<','<<int(b)<<','<<int(c)<<','<<int(d)<<endl;
-    system("pause");
     return 0;
 }
 

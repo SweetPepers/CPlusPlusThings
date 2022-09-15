@@ -81,7 +81,7 @@ int main(void)
 {
     Base ptr;
     Derived d;
-    Base *pt = new Derived(); // 基类指针指向派生类实例
+    Derived *pt = new Derived(); // 基类指针指向派生类实例
     Base &pp = ptr; // 基类引用指向基类实例
     Base &p = d; // 基类引用指向派生类实例
     cout<<"基类对象直接调用"<<endl;
@@ -92,8 +92,8 @@ int main(void)
     pt->fun1(); // Derived::fun1()
     cout<<"基类引用指向基类实例并调用虚函数"<<endl;
     p.fun1(); // Derived::fun1()
-
-
+    cout << "test" << endl;
+    dynamic_cast<Base&>(*pt).fun1();
     // 手动查找vptr 和 vtable
     Fun f1 = getAddr(pt, 0);
     f1();

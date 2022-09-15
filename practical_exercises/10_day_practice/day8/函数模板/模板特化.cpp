@@ -7,16 +7,16 @@ T Max(T a,T b) {
     return (a>b)?a:b;
 }
 //特化
+// 模板中的特殊情况
 //template <> 返回类型 函数名<特化的数据类型>(参数表) {}
 template<>char * Max<char *>(char *a,char *b) {
     return (strcmp(a,b)>=0)?a:b;
 }
 int main(){
     float  c=5.1,d=3.2;
-    cout<<"2,3的最大值是："<<Max(3,2)<<endl;   
-    cout<<"c,d的最大值是："<<Max(c,d)<<endl;   
+    cout<<"2,3的最大值是:"<<Max(3,2)<<endl;   
+    cout<<"c,d的最大值是:"<<Max(c,d)<<endl;   
     cout<<Max("xbv","xyce")<<endl;         
-    system("pause");
 }
 /*
 ① 当程序中同时存在模板和它的特化时，特化将被优先调用；

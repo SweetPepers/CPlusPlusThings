@@ -16,6 +16,7 @@ Counter Counter::operator++(){
     ++n;
     return *this;
 }
+// CURX有时候 传个 int 是代表啥意思??
 Counter Counter::operator++(int){
     n++;
     return *this;
@@ -34,6 +35,7 @@ void Counter::display(){
 int main(int argc, char const *argv[])
 {
     Counter a;
+    // CRUX 怎么区分 ++a 和 a++的??
     ++a;
     a.display();
     a++;
@@ -42,6 +44,5 @@ int main(int argc, char const *argv[])
     a.display();
     a--;
     a.display();
-    system("pause");
     return 0;
 }

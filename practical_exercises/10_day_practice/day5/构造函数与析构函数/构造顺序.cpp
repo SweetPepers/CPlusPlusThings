@@ -29,7 +29,6 @@ public:
 int main()
 {	
     C c; 
-    system("pause");
 }
 
 /*

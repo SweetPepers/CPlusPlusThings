@@ -28,6 +28,5 @@ public:
 }; 
 int main(){
     ABC obj(1,2,3);
-    system("pause");
     return 0;
 }

@@ -26,6 +26,7 @@ Time::Time(int h, int m, int s){
         second=0;
 }
 
+// ++t
 Time Time::operator++(){
     ++second;
     if (second>=60){
@@ -40,6 +41,7 @@ Time Time::operator++(){
     }
     return *this;       
 }
+// --t   友元函数
 Time operator--(Time &t){
     --t.second;
     if (t.second<0){
@@ -71,6 +73,5 @@ int main(int argc, char const *argv[])
     t2.display();
     --t2;
     t2.display();
-    system("pause");
     return 0;
 }

@@ -14,5 +14,4 @@ int main(){
         cout.write(a,12).put('\n');
         cout<<"look"<<"\t here!"<<endl;
     }
-    system("pause");
 }

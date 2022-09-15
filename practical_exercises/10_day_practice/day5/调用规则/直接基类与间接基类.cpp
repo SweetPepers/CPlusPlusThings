@@ -20,5 +20,5 @@ public:
 };
 int main(){
     C c(1);
-    system("pause");
+    // system("pause");
 }

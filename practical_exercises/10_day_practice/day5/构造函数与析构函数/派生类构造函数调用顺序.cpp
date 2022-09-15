@@ -28,7 +28,6 @@ public:
 int main()
 {
 	D d;
-    system("pause");
 }
 
 /*

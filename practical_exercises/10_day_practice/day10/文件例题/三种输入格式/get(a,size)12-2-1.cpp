@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     //get()两个参数
-
+    // 小于size肯定能输入进去, 不行会扩充
     //1.输入串长<size，输入串长>arraylength，会自动扩张arrayname大小，使能保存所有数据
 	// char a[10];
 	// cin.get(a,20);
